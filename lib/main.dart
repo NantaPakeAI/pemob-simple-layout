@@ -43,30 +43,25 @@ class ProfilePage extends StatelessWidget {
             color: Colors.blue[50],
             child: Column(
               children: [
-                // Profile section
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   child: Column(
                     children: [
-                      // Profile picture
                       CircleAvatar(
-                        radius: 60, // Mengurangi ukuran untuk menghemat ruang
+                        radius: 60,
                         backgroundColor: Colors.blue[700],
                         child: const CircleAvatar(
                           radius: 58,
-                          backgroundImage: NetworkImage(
-                            'https://i.pravatar.cc/300',
-                          ),
+                          backgroundImage: AssetImage('assets/images/profile.jpg'),
                         ),
                       ),
                       const SizedBox(height: 10),
-                      // Name
                       const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 20),
                         child: Text(
                           'I Komang Ananta Mahayana',
                           style: TextStyle(
-                            fontSize: 20, // Ukuran font lebih kecil
+                            fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.blue,
                           ),
@@ -74,11 +69,10 @@ class ProfilePage extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 5),
-                      // Website
                       const Text(
-                        'Link github',
+                        '2315091073',
                         style: TextStyle(
-                          fontSize: 14, // Ukuran font lebih kecil
+                          fontSize: 14,
                           color: Colors.blue,
                         ),
                       ),
@@ -86,16 +80,15 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 15),
-                // Grid menu dengan ukuran yang lebih kecil
                 Padding(
                   padding: const EdgeInsets.all(15),
                   child: GridView.count(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     crossAxisCount: 2,
-                    mainAxisSpacing: 10, // Spacing yang lebih kecil
-                    crossAxisSpacing: 10, // Spacing yang lebih kecil
-                    childAspectRatio: 1.4, // Sedikit lebih lebar
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                    childAspectRatio: 1.4,
                     children: [
                       _buildMenuCard(
                         icon: Icons.location_on,
@@ -155,9 +148,9 @@ class ProfilePage extends StatelessWidget {
   }) {
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10), // Border radius lebih kecil
+        borderRadius: BorderRadius.circular(24),
       ),
-      elevation: 2, // Elevasi lebih kecil
+      elevation: 2,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -166,7 +159,7 @@ class ProfilePage extends StatelessWidget {
             child: Center(
               child: Icon(
                 icon,
-                size: 35, // Ukuran icon lebih kecil
+                size: 35,
                 color: color,
               ),
             ),
@@ -182,7 +175,7 @@ class ProfilePage extends StatelessWidget {
                 style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
-                  fontSize: 12, // Ukuran font lebih kecil
+                  fontSize: 12,
                 ),
               ),
             ),
